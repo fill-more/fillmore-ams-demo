@@ -1,0 +1,19 @@
+{
+  "name": "@fillmore/db",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "exports": {
+    ".": {
+      "import": "./index.ts"
+    },
+    "./queries": "./queries.ts",
+    "./supabaseClient": "./supabaseClient.ts",
+    "./types/common": "./types/common.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.4"
+  }
+}
