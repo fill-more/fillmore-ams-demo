@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import fillmoreGradient from '@/assets/fillmore-gradient.png';
 
 const CalendarContainer = styled.div`
   max-width: 1300px;
@@ -59,7 +58,7 @@ const CalendarCell = styled.div<{
 const DateNumber = styled.div<{ isSpecial: boolean; isToday: boolean }>`
   background: ${({ isSpecial, isToday }) =>
     isToday
-      ? `url(${fillmoreGradient})`
+      ? 'linear-gradient(135deg, #0dd4e6 0%, #00e9be 100%)'
       : isSpecial
         ? 'var(--blue-50)'
         : 'transparent'};

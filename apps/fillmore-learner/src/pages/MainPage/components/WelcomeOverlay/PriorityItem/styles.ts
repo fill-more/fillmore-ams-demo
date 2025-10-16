@@ -1,7 +1,5 @@
 import styled from '@emotion/styled';
 
-import lineGradient from '@/assets/fillmore-gradient.png';
-
 const Card = styled.div`
   display: flex;
   align-items: center;
@@ -20,7 +18,7 @@ const Card = styled.div`
     top: 0;
     bottom: 0;
     width: 4px;
-    background-image: url(${lineGradient});
+    background: linear-gradient(135deg, #0dd4e6 0%, #00e9be 100%);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

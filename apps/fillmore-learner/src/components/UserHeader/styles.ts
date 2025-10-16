@@ -56,7 +56,7 @@ const ExperienceBarWrapper = styled.div`
 
 const ExperienceBarFill = styled.div`
   height: 100%;
-  background-image: url('/src/assets/fillmore-gradient.png');
+  background-image: linear-gradient(135deg, #0dd4e6 0%, #00e9be 100%);
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center center;

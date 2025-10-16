@@ -26,12 +26,17 @@ const ToggleWrapper = styled.button<{ disabled?: boolean }>`
   }
 `;
 
-const ToggleBackground = styled.img<{ isOn: boolean }>`
+const ToggleBackground = styled.div<{ isOn: boolean }>`
   transition: opacity 0.2s;
 
   width: 100%;
   height: 100%;
   border-radius: 16px;
+
+  background: ${({ isOn }) =>
+    isOn
+      ? 'linear-gradient(135deg, #0dd4e6 0%, #00e9be 100%)'
+      : 'var(--light-gray)'};
   position: absolute;
   top: 0;
   left: 0;

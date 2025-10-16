@@ -11,7 +11,7 @@ type Item = {
 };
 
 const items: Item[] = [
-  { label: 'Daily login', current: 10, total: 10, accent: '#ff6b6b' },
+  { label: 'Daily login', current: 10, total: 10, accent: '#0DD4E6' },
   { label: 'Correct answers', current: 70, total: 200 },
   { label: 'Teamwork', current: 3, total: 6 },
 ];
@@ -34,7 +34,7 @@ function StreaksCard() {
       <VStack gap={8}>
         {items.map((item, idx) => {
           const pct = (item.current / item.total) * 100;
-          const giftColor = idx === 0 ? '#ff6b6b' : 'var(--white-10)';
+          const giftColor = idx === 0 ? '#0DD4E6' : 'var(--white-10)';
 
           return (
             <HStack

@@ -48,7 +48,7 @@ const ButtonContainer = styled.button<{
   ${({ filled }) => {
     return filled
       ? `
-      color: var(--white);
+      color: var(--black);
       background-image: linear-gradient(135deg, #0DD4E6 0%, #00E9BE 100%);
       background-repeat: no-repeat;
       background-size: 110% 300%;

@@ -1,6 +1,6 @@
 import { type FC, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import gradientBackground from '@/assets/fillmore-gradient.png';
+import background from '@/assets/background-soldier.png';
 import whiteLogo from '@/assets/logo-mark/white.svg';
 import PriorityItem, { type PriorityItemData } from './PriorityItem';
 import { welcomeOverlayPriorityItems } from '@/datas/welcomeOverlay';
@@ -33,7 +33,7 @@ const WelcomeOverlay: FC<WelcomeOverlayProps> = ({
 
   return createPortal(
     <S.Overlay>
-      <S.BackgroundLayer src={gradientBackground} alt="Fillmore gradient" />
+      <S.BackgroundLayer src={background} alt="Fillmore gradient" />
       <VStack
         align="center"
         gap={32}

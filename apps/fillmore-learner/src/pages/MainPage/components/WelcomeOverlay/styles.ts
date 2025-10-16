@@ -42,9 +42,9 @@ const Divider = styled.div`
   width: 100%;
   background: linear-gradient(
     90deg,
-    rgba(180, 180, 180, 0) 0%,
-    #a14f4f 49.5%,
-    rgba(180, 180, 180, 0) 100%
+    #b4b4b400 0%,
+    #0dd4e6 49.5%,
+    #b4b4b400 100%
   );
 `;
 

@@ -19,7 +19,7 @@ const Fill = styled.div<{
   width: ${(p) => Math.min(100, Math.max(0, p.pct))}%;
   background: ${(p) =>
     p.accent
-      ? `linear-gradient(90deg, ${p.accent} 0%, var(--white-60) 100%)`
+      ? 'linear-gradient(135deg, #0dd4e6 0%, #00e9be 100%)'
       : 'var(--white)'};
 `;
 

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import S from './styles';
 import { Button, VStack, TextField, Background, Text } from '@fillmore/ui';
 import logoWhite from '@/assets/logo-full/white.svg';
-import background from '@/assets/fillmore-gradient.png';
+import background from '@/assets/background-soldier.png';
 import { PATHNAME, SESSION_KEY_WELCOME_OVERLAY } from '@/lib/constants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faIdCard, faUnlockKeyhole } from '@fortawesome/free-solid-svg-icons';
@@ -37,7 +37,7 @@ function LoginPage() {
 
   return (
     <S.Container>
-      <Background src={background} style={{ filter: 'brightness(0.2)' }} />
+      <Background src={background} />
       <VStack gap={16}>
         <S.Logo src={logoWhite} alt="Fillmore Logo" />
         <S.LoginForm>
@@ -75,7 +75,7 @@ function LoginPage() {
               />
             </VStack>
             <Button
-              variant="light"
+              variant="dark"
               size="small"
               filled={true}
               onClick={handleLogin}

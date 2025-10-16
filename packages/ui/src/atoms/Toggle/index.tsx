@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import gradientBackground from './fillmore-gradient.png';
 import S from './styles';
 
 interface ToggleProps {
@@ -38,11 +37,7 @@ const Toggle: React.FC<ToggleProps> = ({
         }
       }}
     >
-      <S.ToggleBackground
-        src={gradientBackground}
-        alt="Toggle Background"
-        isOn={currentState}
-      />
+      <S.ToggleBackground isOn={currentState} />
       <S.ToggleHandle isOn={currentState} />
     </S.ToggleWrapper>
   );
