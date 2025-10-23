@@ -27,7 +27,7 @@ function Layout({
 
   return (
     <S.Container>
-      <Background src={backgroundSubtleLight} zIndex={-2} />
+      <Background src={backgroundSubtleLight} opacity={0.1} zIndex={-2} />
       <Background src={backgroundRadialDark} opacity={0.5} zIndex={-1} />
       {showUserHeader && <UserHeader showDetails={showUserHeaderDetails} />}
       {children}

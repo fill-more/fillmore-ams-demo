@@ -1,5 +1,4 @@
-import LogoBlack from '@/assets/logo-mark/black.svg';
-import LogoWhite from '@/assets/logo-mark/white.svg';
+import LogoColored from '@/assets/logo-mark/colored.svg';
 import S from './styles';
 import { useEffect, useRef, useState } from 'react';
 import { TextField, VStack } from '@fillmore/ui';
@@ -94,27 +93,22 @@ const QuickAIButton = () => {
         </VStack>
       </S.Overlay>
       <S.Container style={{ zIndex: isOpen ? 1001 : 300 }}>
-        <S.DiamondWrapper>
-          <S.DiamondBorder
-            width={200}
-            height={200}
-            style={{
-              opacity: isOpen ? 0.1 : 1,
-            }}
-          />
-          <S.DiamondBorder
-            width={80}
-            height={80}
+        <S.CircleWrapper>
+          <S.CircleBorder width={200} height={200} isOpen={isOpen} />
+          <S.CircleBorder
+            width={124}
+            height={124}
+            isOpen={isOpen}
             style={{
               backgroundColor: isOpen ? 'var(--black-20)' : 'var(--white-20)',
             }}
           />
           <S.Logo
-            src={isOpen ? LogoWhite : LogoBlack}
+            src={LogoColored}
             alt="AI Assistant"
             onClick={() => setIsOpen((prev) => !prev)}
           />
-        </S.DiamondWrapper>
+        </S.CircleWrapper>
       </S.Container>
     </>
   );

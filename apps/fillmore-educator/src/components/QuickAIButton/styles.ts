@@ -8,26 +8,31 @@ const Container = styled.div`
   z-index: 500;
 `;
 
-const DiamondWrapper = styled.div`
+const CircleWrapper = styled.div`
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
-const DiamondBorder = styled.div<{ width: number; height: number }>`
+const CircleBorder = styled.div<{
+  width: number;
+  height: number;
+  isOpen: boolean;
+}>`
   position: absolute;
   width: ${(props) => props.width}px;
   height: ${(props) => props.height}px;
-  transform: rotate(45deg);
-  border: 1px solid var(--light-gray-80);
+  border: ${(props) =>
+    props.isOpen ? 'none' : '1px solid var(--light-gray-80)'};
+  border-radius: 50%;
   transition: background-color 0.3s ease;
   pointer-events: none;
 `;
 
 const Logo = styled.img`
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
   z-index: 1;
   cursor: pointer;
 `;
@@ -40,7 +45,7 @@ const Overlay = styled.div<{ isOpen: boolean }>`
   top: 0;
   left: 0;
   right: 0;
-  bottom: 128px;
+  bottom: 168px;
   transition: opacity 0.3s ease;
   opacity: ${(props) => (props.isOpen ? 1 : 0)};
   background: linear-gradient(
@@ -120,8 +125,8 @@ const LoadingDot = styled.div<{ delay: number }>`
 
 export default {
   Container,
-  DiamondWrapper,
-  DiamondBorder,
+  CircleWrapper,
+  CircleBorder,
   Logo,
   Overlay,
   Message,
